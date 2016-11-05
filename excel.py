@@ -45,7 +45,7 @@ class ExcelTable:
         self._player_count['hps'] = 0
 
         # Init logger
-        self._logger = logger.Logger("log_excel.txt")
+        self._logger = logger.Logger("logs/wls_excel.txt")
 
     # Add new worksheet to the workbook and return its index
     def _addWorksheet(self, name=""):

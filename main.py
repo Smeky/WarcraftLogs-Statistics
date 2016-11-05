@@ -61,7 +61,7 @@ fights_data = {}
 raid_info   = {}
 zone_info   = {}
 
-logger = logger.Logger("log_main.txt")
+logger = logger.Logger("logs/wls.txt")
 
 # -- Functions --
 
