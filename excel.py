@@ -77,7 +77,7 @@ class ExcelTable:
         return {'w': width, 'h': height}
 
     def openFile(self, name):
-        self._logger.log("Opening file: " + name)
+        self._logger.log("\nOpening file: " + name)
 
         self._workbook = xlsxwriter.Workbook(name)
 
@@ -117,7 +117,7 @@ class ExcelTable:
     def closeFile(self):
         self._logger.log("\n-----------------------------")
         self._logger.log("Closing file")
-        self._logger.log("-----------------------------\n")
+        self._logger.log("-----------------------------")
 
         self._workbook.close()
 

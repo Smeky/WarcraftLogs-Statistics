@@ -748,7 +748,7 @@ parseDamageTaken()
 
 logger.log("\n-----------------------------")
 logger.log("Writing parsed data into .xlsx file")
-logger.log("-----------------------------\n")
+logger.log("-----------------------------")
 
 excel = excel.ExcelTable(zone_info, raid_info, fights_data, player_data)
 

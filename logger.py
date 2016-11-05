@@ -5,7 +5,7 @@ class Logger:
     def log(self, *args):
         for arg in args:
             self._log_file.write(str(arg))
-            self._log_file.write('')
+            self._log_file.write('\r\n')
 
             try:
                 print(arg)
