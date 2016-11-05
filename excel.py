@@ -115,8 +115,9 @@ class ExcelTable:
 
 
     def closeFile(self):
-        self._logger.log("-----------------------------")
+        self._logger.log("\n-----------------------------")
         self._logger.log("Closing file")
+        self._logger.log("-----------------------------\n")
 
         self._workbook.close()
 
@@ -410,7 +411,7 @@ class ExcelTable:
         raid_link   = "https://www.warcraftlogs.com/reports/" + self._raid_info['code']
 
         # Raid info header
-        self._worksheet[_WS_STATISTICS].merge_range(offset_y, offset_x, offset_y, offset_x + 2, "Raid info", cell_rinfo_head)
+        self._worksheet[_WS_STATISTICS].merge_range(offset_y, offset_x, offset_y, offset_x + 2, "Development info", cell_rinfo_head)
         # Uploader
         self._worksheet[_WS_STATISTICS].write(offset_y + 1, offset_x, "Raid title", cell_rinfo_left)
         self._worksheet[_WS_STATISTICS].merge_range(offset_y + 1, offset_x + 1, offset_y + 1, offset_x + 2, self._raid_info['title'], cell_rinfo_right)
@@ -529,7 +530,7 @@ class ExcelTable:
 
             potions         = self._getPlayerTotalPotionUsed(player, kill=kill_data)
             flask_uptime    = str(round(self._getPlayerTotalFlaskUptime(player, kill=kill_data), 0)) + '%'
-            food_uptime     = '-' # str(round(self._getPlayerTotalFoodUptime(player, kill=kill_data), 0)) + '%'
+            food_uptime     = str(round(self._getPlayerTotalFoodUptime(player, kill=kill_data), 0)) + '%'
             
             self._worksheet[_WS_STATISTICS].write(player_row, stat_column + 0, potions, cell_consumables_left_format)
             self._worksheet[_WS_STATISTICS].write(player_row, stat_column + 1, flask_uptime, cell_consumables_mid_format)
@@ -587,8 +588,8 @@ class ExcelTable:
         return player_row + 2 # return at which row we have ended 
 
     def writeStatisticsTable(self, main_offset_x, main_offset_y):
+        self._logger.log("\nCreating general statistics table")
         self._logger.log("-----------------------------")
-        self._logger.log("Writing statistics table")
 
         offset_x = main_offset_x
         offset_y = main_offset_y
@@ -628,9 +629,11 @@ class ExcelTable:
         offset_x = main_offset_x
         offset_y = main_offset_y
 
+        self._logger.log("\nCreating ranking tables")
+        self._logger.log("-----------------------------")
+
         for metric in METRIC_TYPE:
-            self._logger.log("-----------------------------")
-            self._logger.log("Writing table for " + metric + " at " + str(offset_x) + "x" + str(offset_y))
+            self._logger.log("  " + metric + " table at " + str(offset_x) + "x" + str(offset_y))
 
             self._writeRankingTableTitle(metric, offset_x, offset_y)
             self._writeBossNameRow(offset_x, offset_y)
@@ -726,6 +729,9 @@ class ExcelTable:
         self._worksheet[sheet_index].write(title_row, offset_x + 5, "Deaths",               default_header_format)
 
     def writeEncounterStats(self, difficulty, offset_x, offset_y):
+        self._logger.log("\nCreating encounter statistic tables")
+        self._logger.log("-----------------------------")
+
         cell_poty_format = self._workbook.add_format({'align': 'center', 'bg_color': "#92D050"})
         cell_potn_format = self._workbook.add_format({'align': 'center', 'bg_color': "#FF5757"})
         cell_stat_format_odd  = self._workbook.add_format({'align': 'center', 'bg_color': "#D9D9D9"})
@@ -734,8 +740,7 @@ class ExcelTable:
         i = 0
 
         for encounter in self._zone_info['encounters']:
-            self._logger.log("-----------------------------")
-            self._logger.log("Writing encounter statistics tables for " + self._shrinkBossName(encounter['name']))
+            self._logger.log("  " + self._shrinkBossName(encounter['name']))
             
             sheet_index = _WS_BOSS_INDEX_INIT + i
             i += 1

@@ -1,5 +1,16 @@
 -------------------------------------------Beginning analysis for [ tTAy1Z8YwDVcnfpv ]-------------------------------------------Realms:  drakthul  burning-blade
-Features:  pots  healin  ranking  deaths  food  flask  ilv  attended  dmgin  healout  dmgout
+Features:  flask
 -----------------------------Start: Parsing fights data-----------------------------
 Downloading report for:
 https://www.warcraftlogs.com/v1/report/fights/tTAy1Z8YwDVcnfpv?api_key=e6b4169ddef610cca017c92d62d3028c
+Raid info:  title: EM myth farm + cibule  start: 1478198067102  end: 1478210932726
+List of boss fights:  4 Nythendra  12 Ursoc  18 Elerethe Renferal  22 Il'gynoth, The Heart of Corruption  23 Il'gynoth, The Heart of Corruption  24 Il'gynoth, The Heart of Corruption  25 Il'gynoth, The Heart of Corruption  26 Il'gynoth, The Heart of Corruption  27 Il'gynoth, The Heart of Corruption  28 Il'gynoth, The Heart of Corruption  29 Il'gynoth, The Heart of Corruption  30 Il'gynoth, The Heart of Corruption  31 Il'gynoth, The Heart of Corruption  32 Il'gynoth, The Heart of Corruption  33 Il'gynoth, The Heart of Corruption  34 Il'gynoth, The Heart of Corruption
+List of attended players:  Apâges  Baff  Cmx  Cyrusdavirus  Deirdre  Dragoonkin  Fisitierra  Ginjiro  Gorgomar  Mentalyblown  Nilké  Projax  Radiocurable  Rikkí  Riu  Sharpest  Sméky  Soulstone  Waaugghdh  Xayla  Zenyra
+-----------------------------Start: Parsing zone data-----------------------------Downloading zone data, zone ID: 10
+Encounters:  (1853) Nythendra  (1873) Il'gynoth, Heart of Corruption  (1876) Elerethe Renferal  (1841) Ursoc  (1854) Dragons of Nightmare  (1877) Cenarius  (1864) Xavius
+Brackets:  (1) 0-829  (2) 830-832  (3) 833-835  (4) 836-838  (5) 839-841  (6) 842-844  (7) 845-847  (8) 848-850  (9) 851-853  (10) 854-856  (11) 857-859  (12) 860-862  (13) 863-865  (14) 866-868  (15) 869-871  (16) 872-874  (17) 875-877  (18) 878-880  (19) 881-883  (20) 884-886  (21) 887-889  (22) 890-892  (23) 893-895  (24) 896-898  (25) 899-901  (26) 902-904  (27) 905-907  (28) 908-910  (29) 911-913  (30) 914-916  (31) 917-919  (32) 920+
+-----------------------------Start: Parsing consumables information for all players-----------------------------
+  Flask: 188031 - Total of 154 buffs found  Flask: 188033 - Total of 83 buffs found  Flask: 188035 - Total of 31 buffs found
+-----------------------------Writing parsed data into .xlsx file-----------------------------
+
+-------------------------------------------Analysis ended successfully-------------------------------------------

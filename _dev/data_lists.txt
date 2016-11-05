@@ -26,10 +26,11 @@ player
             [difficulty]
             [boss]
             ['enhancements']
-                ['pot_1'] => boolean
-                ['pot_2'] => boolean
-                ['flask'] => float
-                ['food']  => float  
+                ['pot_1']       => boolean
+                ['pot_2']       => boolean
+                ['flask']       => float
+                ['food']        => float  
+                ['food_type']   => string
             [dmg_taken]
             [dmg_done]
             [dps]

@@ -17,8 +17,6 @@ URL_REPORT_BUFF     = "https://www.warcraftlogs.com/v1/report/tables/buffs/"
 URL_REPORT_DEATH    = "https://www.warcraftlogs.com/v1/report/tables/deaths/"
 URL_PARSES_CHAR     = "https://www.warcraftlogs.com/v1/parses/character/"
 URL_ZONES           = "https://www.warcraftlogs.com/v1/zones"
-URL_REALM_DT        = "/drakthul/EU"
-URL_REALM_BB        = "/burning-blade/EU"
 
 CLASSES = ["DeathKnight", "DemonHunter", "Druid", "Hunter", "Mage", "Monk", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior"]
 
@@ -123,8 +121,11 @@ def parseArgs():
                 setFeatureStateToAll(False)
 
             if ',' not in arg:
-                logger.log("Error: Given unknown -enable arguemnt: " + arg)
-                quit()
+                if setFeatureState(arg, True) == False:
+                    logger.log("Error: Given unknown -enable arguemnt: " + arg)
+                    quit()
+                else:
+                    continue
 
             to_parse = arg.split(',')
 
@@ -153,14 +154,6 @@ def buildUrl(base, *args):
         result += arg
 
     return result
-
-def getRealmUrl(realm):
-    if realm == "DT":
-        return URL_REALM_DT
-    elif realm == "BB":
-        return URL_REALM_BB
-    else:
-        return "Unknown"
 
 def getJsonFromUrl(url, dev_file=""):
     if DEV_VER == True:
@@ -197,7 +190,7 @@ def setupPlayerList(friendlies):
             data['name']    = character.get('name', "Unknown")
             data['class']   = character.get('type', "Unknown")
             data['id']      = character.get('id', 0)
-            data['realm']   = "DT"
+            data['realm']   = REALMS[0] # Use first realm as deafult
             data['ranking'] = None
             data['fights']  = {}
 
@@ -224,10 +217,11 @@ def setupPlayerList(friendlies):
                 fight_data['deaths']        = []
 
                 fight_data['enhancements']  = {}
-                fight_data['enhancements']['pot_1'] = False
-                fight_data['enhancements']['pot_2'] = False
-                fight_data['enhancements']['flask'] = 0
-                fight_data['enhancements']['food']  = 0
+                fight_data['enhancements']['pot_1']     = False
+                fight_data['enhancements']['pot_2']     = False
+                fight_data['enhancements']['flask']     = 0
+                fight_data['enhancements']['food']      = 0
+                fight_data['enhancements']['food_type'] = ""
 
                 data['fights'][fightID] = fight_data
 
@@ -291,10 +285,6 @@ def parseFightsData():
     for name, _ in sorted(player_data.items()):
         logger.log("  " + name)
 
-    logger.log("\n-----------------------------")
-    logger.log("End: Parsing fights data")
-    logger.log("-----------------------------")
-
 def parseZoneInfo():
     logger.log("\n-----------------------------")
     logger.log("Start: Parsing zone data")
@@ -353,10 +343,6 @@ def parseZoneInfo():
 
                 zone_info['brackets'][bracket['id']] = data
 
-    logger.log("\n-----------------------------")
-    logger.log("End: Parsing zone data")
-    logger.log("-----------------------------")
-
 
 def getBracketId(itemlevel):
     if itemlevel == 0:
@@ -393,20 +379,10 @@ def getBossIdByName(name):
     return 0
 
 def getPlayerParseUrl(name, realm, metric):
-    if realm == "DT":
-        return buildUrl(URL_PARSES_CHAR + urllib.parse.quote(name) + URL_REALM_DT, metric, API_KEY)
-    elif realm == "BB":
-        return buildUrl(URL_PARSES_CHAR + urllib.parse.quote(name) + URL_REALM_BB, metric, API_KEY)
-    else:
-        return ""
+    return buildUrl(URL_PARSES_CHAR + urllib.parse.quote(name) + '/' + realm + '/EU', metric, API_KEY)
 
 def getPlayerBracketUrl(name, realm, metric, bracket):
-    if realm == "DT":
-        return buildUrl(URL_PARSES_CHAR + urllib.parse.quote(name) + URL_REALM_DT, metric, "bracket=" + str(bracket), API_KEY)
-    elif realm == "BB":
-        return buildUrl(URL_PARSES_CHAR + urllib.parse.quote(name) + URL_REALM_BB, metric, "bracket=" + str(bracket), API_KEY)
-    else:
-        return ""    
+    return buildUrl(URL_PARSES_CHAR + urllib.parse.quote(name) + '/' + realm + '/EU', metric, "bracket=" + str(bracket), API_KEY)
 
 def validateParsedData(data):
     if data == False:
@@ -485,8 +461,6 @@ def parseBracketRanking(complete_ranking, bracket_data, metric):
     return complete_ranking
 
 def parseRankingForPlayers():
-    print("rank  " + str(ENABLED_FEATURES['ranking']))
-
     if ENABLED_FEATURES['ranking'] == False:
         return
 
@@ -505,21 +479,26 @@ def parseRankingForPlayers():
 
             url         = getPlayerParseUrl(name, player['realm'], "metric=" + metric)
             char_data   = getJsonFromUrl(url)
+            data_found  = validateParsedData(char_data)
 
-            if validateParsedData(char_data) == False:
-                url         = getPlayerParseUrl(name, "BB", "metric=" + metric)
-                char_data   = getJsonFromUrl(url)
+            if data_found == False:
+                for realm in REALMS:
+                    url         = getPlayerParseUrl(name, realm, "metric=" + metric)
+                    char_data   = getJsonFromUrl(url)
 
-                if validateParsedData(char_data) == False:
-                    log_msg += "No valid ranking found"
-                    logger.log(log_msg)
+                    if validateParsedData(char_data) == True:
+                        # Correct realm of player was found, store it
+                        player_data[name]['realm'] = realm
+                        data_found = True
+                        break
+                
+            # If not data was found for the player in given realm list for this metric, skip him
+            if data_found == False:
+                log_msg += "No valid ranking found"
+                logger.log(log_msg)
 
-                    # No valid ranking data was found for this player
-                    continue
-                else:
-                    # Correct realm of player was found, store it
-                    player_data[name]['realm'] = "BB"
-            
+                continue
+
             # Get list of all itemleves so we can query for bracket ranking
             # All duplicates are removed
             brackets = getAllBrackets(char_data)
@@ -547,10 +526,6 @@ def parseRankingForPlayers():
         player['ranking'][RAID_DIFFICULTY] = ranking
 
         logger.log("-----------------------------")
-
-    logger.log("\n-----------------------------")
-    logger.log("End: Parsing ranking for all players")
-    logger.log("-----------------------------")
 
 def parsePotionsConsumable():
     POTIONS_ID = ["188027", "188028", "229206"]
@@ -638,6 +613,53 @@ def parseFlaskConsumable():
 
         logger.log("  Flask: " + flask + " - Total of " + str(total_buff_counter) + " buffs found")
 
+def parseFoodConsumable():
+    FOOD_ID = {
+        "300": ["225597", "225598", "225599"],
+        "375": ["225602", "225603", "225604", "225605", "225606"] 
+    }
+
+    raid_start = raid_info['raid_start']
+    raid_end   = raid_info['raid_end']
+
+    for category, food_ids in FOOD_ID.items():
+        for food in food_ids:
+            url_start   = "start="      + str(0)
+            url_end     = "end="        + str(raid_end - raid_start)
+            url_ability = "abilityid="  + food
+            
+            url     = buildUrl(URL_REPORT_BUFF + RAID_CODE, url_start, url_end, url_ability, API_KEY)
+            data    = getJsonFromUrl(url)
+
+            total_buff_counter = 0
+
+            for player_aura in data['auras']:
+                name = player_aura['name']
+
+                for buff in player_aura['bands']:
+                    fightID     = None
+                    start_time  = buff['startTime']
+                    end_time    = buff['endTime']
+                    uptime      = 0
+
+                    for ID, fight_data in fights_data.items():
+                        if start_time >= fight_data['start'] and end_time <= fight_data['end']:
+                            uptime = (end_time - start_time) / (fight_data['end'] - fight_data['start'])
+
+                            fightID = ID
+                            break
+
+                    # Skip non-boss fights
+                    if fightID == None or player_data[name]['fights'][fightID] == None:
+                        continue
+
+                    player_data[name]['fights'][fightID]['enhancements']['food']        = uptime
+                    player_data[name]['fights'][fightID]['enhancements']['food_type']   = category
+
+                    total_buff_counter += 1
+
+            logger.log("  Food: " + food + " - Total of " + str(total_buff_counter) + " buffs found")
+
 def parseConsumablesInfo():
     if ENABLED_FEATURES['pots'] == False and ENABLED_FEATURES['flask'] == False and ENABLED_FEATURES['food'] == False:
         return
@@ -652,10 +674,8 @@ def parseConsumablesInfo():
         parsePotionsConsumable()
     if ENABLED_FEATURES['flask'] == True:
         parseFlaskConsumable()
-
-    logger.log("\n-----------------------------")
-    logger.log("End: Parsing consumables information for all players")
-    logger.log("-----------------------------\n")
+    if ENABLED_FEATURES['food'] == True:
+        parseFoodConsumable()
 
 def parseDeathInfo():
     if ENABLED_FEATURES['deaths'] == False:
@@ -728,7 +748,7 @@ parseDamageTaken()
 
 logger.log("\n-----------------------------")
 logger.log("Writing parsed data into .xlsx file")
-logger.log("-----------------------------")
+logger.log("-----------------------------\n")
 
 excel = excel.ExcelTable(zone_info, raid_info, fights_data, player_data)
 
