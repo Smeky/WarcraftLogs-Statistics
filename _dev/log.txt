@@ -1,0 +1,110 @@
+-------------------------------------------
+Beginning analysis for [ crbLa9vzYBX7pWtQ ]
+-------------------------------------------
+
+-----------------------------
+Start: Parsing fights data
+-----------------------------
+
+Downloading report for:
+https://www.warcraftlogs.com/v1/report/fights/crbLa9vzYBX7pWtQ?api_key=e6b4169ddef610cca017c92d62d3028c
+
+Raid info:
+  title: Emerald Nightmare
+  start: 1476381170493
+  end: 1476385977571
+
+List of attended players:
+  Deirdre
+  Waaugghdh
+  Nilké
+  Riu
+  Xayla
+  Dragoonkin
+  Fisitierra
+  Soulstone
+  Thomyeah
+  Mentalyblown
+  Mirzuliena
+  Rikkí
+  Zenyra
+  Radiocurable
+  Baff
+  Martyss
+  Àmfi
+  Cyrusdavirus
+  Cmx
+  Apâges
+  Projax
+  Sharpest
+  Gorgomar
+  Sméky
+
+List of boss fights:
+  1 Nythendra
+  2 Ursoc
+  3 Elerethe Renferal
+  4 Dragons of Nightmare
+  5 Il'gynoth, The Heart of Corruption
+  6 Cenarius
+  7 Xavius
+
+-----------------------------
+End: Parsing fights data
+-----------------------------
+
+-----------------------------
+Start: Parsing zone data
+-----------------------------
+Downloading zone data - Emerald Nightmare
+
+Encounters:
+  (1853) Nythendra
+  (1873) Il'gynoth, Heart of Corruption
+  (1876) Elerethe Renferal
+  (1841) Ursoc
+  (1854) Dragons of Nightmare
+  (1877) Cenarius
+  (1864) Xavius
+
+Brackets:
+  (1) 0-829
+  (2) 830-832
+  (3) 833-835
+  (4) 836-838
+  (5) 839-841
+  (6) 842-844
+  (7) 845-847
+  (8) 848-850
+  (9) 851-853
+  (10) 854-856
+  (11) 857-859
+  (12) 860-862
+  (13) 863-865
+  (14) 866-868
+  (15) 869-871
+  (16) 872-874
+  (17) 875-877
+  (18) 878-880
+  (19) 881-883
+  (20) 884-886
+  (21) 887-889
+  (22) 890-892
+  (23) 893-895
+  (24) 896-898
+  (25) 899-901
+  (26) 902-904
+  (27) 905-907
+  (28) 908-910
+  (29) 911-913
+  (30) 914-916
+  (31) 917-919
+  (32) 920+
+
+-----------------------------
+End: Parsing zone data
+-----------------------------
+
+-----------------------------
+Start: Writing parsed data into .xlsx file
+-----------------------------

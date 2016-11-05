@@ -1,0 +1,23 @@
+
+
+WLA : Program args
+
+Required
+    - [raid_code]   <= First arg
+    - -e=all      <= Enable parsing all stats     (-enable=all)
+        -> -e=ranking,deaths,pots,food        <= Enable parsing for given categories
+    - -help -h      <= Print help
+    - -v            <= Print WLA version
+    - -r=drakthul,burning-blade     <= Realms to parse
+
+Optional
+    - -diff=4       <= Raid difficulty to be parse - If not specified, all difficulties are parsed
+    - -ranking=dps,hps  <= Enable only specific ranking stats   (-r=dps,hps)
+    - -silent -s    <= Do not print logs
+    - -file=something      <= Output file name (-f=something) 
+
+
+
+
+
+    

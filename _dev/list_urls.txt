@@ -1,0 +1,11 @@
+zones.txt
+https://www.warcraftlogs.com/v1/zones?api_key=e6b4169ddef610cca017c92d62d3028c
+
+classes.txt
+https://www.warcraftlogs.com/v1/classes?api_key=e6b4169ddef610cca017c92d62d3028c
+
+parse_char_smeky.txt
+https://www.warcraftlogs.com/v1/parses/character/Sm%C3%A9ky/drakthul/EU?metric=dps&api_key=e6b4169ddef610cca017c92d62d3028c
+
+report_fights.txt
+https://www.warcraftlogs.com/v1/report/fights/6RjztwFZy7qLfnG9?api_key=e6b4169ddef610cca017c92d62d3028c

@@ -1,0 +1,53 @@
+
+player
+    ['name']
+    ['class']
+    ['id']   
+    ['realm']
+    ['ranking']
+        [4]   <= Difficulty
+            [1853]
+                ['ilv']
+                ['dps']
+                    ['aps']
+                    ['prcnt']
+                    ['hist']
+                ['hps']
+                    ['aps']
+                    ['prcnt']
+                    ['hist']
+            [1877]
+                ...
+        [5]
+            ...
+    ['fights']
+        [1]
+            [kill] => boolean
+            [difficulty]
+            [boss]
+            ['enhancements']
+                ['pot_1'] => boolean
+                ['pot_2'] => boolean
+                ['flask'] => float
+                ['food']  => float  
+            [dmg_taken]
+            [dmg_done]
+            [dps]
+            [hps]
+            [death_count] 
+            [deaths] <= list
+                => Currently empty, entry in the list counts as death
+        [2]
+        [3] => player has entry for all raid fights, but their deafult value is None
+
+
+
+
+zone_info
+    ['encounters']
+        [               <= List (not dict)
+            ['name']
+            ['boss']
+            ['order']
+        ]
+    ['brackets']

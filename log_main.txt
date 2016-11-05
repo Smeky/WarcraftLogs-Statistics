@@ -1,0 +1,5 @@
+-------------------------------------------Beginning analysis for [ tTAy1Z8YwDVcnfpv ]-------------------------------------------Realms:  drakthul  burning-blade
+Features:  pots  healin  ranking  deaths  food  flask  ilv  attended  dmgin  healout  dmgout
+-----------------------------Start: Parsing fights data-----------------------------
+Downloading report for:
+https://www.warcraftlogs.com/v1/report/fights/tTAy1Z8YwDVcnfpv?api_key=e6b4169ddef610cca017c92d62d3028c

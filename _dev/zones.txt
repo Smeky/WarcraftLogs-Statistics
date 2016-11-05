@@ -1,0 +1,785 @@
+[
+    {
+        "id": 3,
+        "name": "Challenge Modes",
+        "frozen": true,
+        "encounters": [
+            {
+                "id": 11182,
+                "name": "Auchindoun"
+            },
+            {
+                "id": 11175,
+                "name": "Bloodmaul Slag Mines"
+            },
+            {
+                "id": 11279,
+                "name": "The Everbloom"
+            },
+            {
+                "id": 11208,
+                "name": "Grimrail Depot"
+            },
+            {
+                "id": 11195,
+                "name": "Iron Docks"
+            },
+            {
+                "id": 11176,
+                "name": "Shadowmoon Burial Grounds"
+            },
+            {
+                "id": 11209,
+                "name": "Skyreach"
+            },
+            {
+                "id": 11358,
+                "name": "Upper Blackrock Spire"
+            }
+        ],
+        "brackets": [
+            {
+                "id": 1,
+                "name": "6.0"
+            },
+            {
+                "id": 2,
+                "name": "6.1"
+            },
+            {
+                "id": 3,
+                "name": "6.2"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Throne of Thunder",
+        "frozen": true,
+        "encounters": [
+            {
+                "id": 1577,
+                "name": "Jin'rokh the Breaker"
+            },
+            {
+                "id": 1575,
+                "name": "Horridon"
+            },
+            {
+                "id": 1570,
+                "name": "Council of Elders"
+            },
+            {
+                "id": 1565,
+                "name": "Tortos"
+            },
+            {
+                "id": 1578,
+                "name": "Megaera"
+            },
+            {
+                "id": 1573,
+                "name": "Ji-kun"
+            },
+            {
+                "id": 1572,
+                "name": "Durumu the Forgotten"
+            },
+            {
+                "id": 1574,
+                "name": "Primordius"
+            },
+            {
+                "id": 1576,
+                "name": "Dark Animus"
+            },
+            {
+                "id": 1559,
+                "name": "Iron Qon"
+            },
+            {
+                "id": 1560,
+                "name": "Twin Consorts"
+            },
+            {
+                "id": 1579,
+                "name": "Lei Shen"
+            },
+            {
+                "id": 1580,
+                "name": "Ra-den"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Siege of Orgrimmar",
+        "frozen": true,
+        "encounters": [
+            {
+                "id": 1602,
+                "name": "Immerseus"
+            },
+            {
+                "id": 1598,
+                "name": "The Fallen Protectors"
+            },
+            {
+                "id": 1624,
+                "name": "Norushen"
+            },
+            {
+                "id": 1604,
+                "name": "Sha of Pride"
+            },
+            {
+                "id": 1622,
+                "name": "Galakras"
+            },
+            {
+                "id": 1600,
+                "name": "Iron Juggernaut"
+            },
+            {
+                "id": 1606,
+                "name": "Kor'kron Dark Shaman"
+            },
+            {
+                "id": 1603,
+                "name": "General Nazgrim"
+            },
+            {
+                "id": 1595,
+                "name": "Malkorok"
+            },
+            {
+                "id": 1594,
+                "name": "Spoils of Pandaria"
+            },
+            {
+                "id": 1599,
+                "name": "Thok the Bloodthirsty"
+            },
+            {
+                "id": 1601,
+                "name": "Siegecrafter Blackfuse"
+            },
+            {
+                "id": 1593,
+                "name": "Paragons of the Klaxxi"
+            },
+            {
+                "id": 1623,
+                "name": "Garrosh Hellscream"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Highmaul",
+        "frozen": true,
+        "encounters": [
+            {
+                "id": 1721,
+                "name": "Kargath Bladefist"
+            },
+            {
+                "id": 1706,
+                "name": "The Butcher"
+            },
+            {
+                "id": 1722,
+                "name": "Tectus, The Living Mountain"
+            },
+            {
+                "id": 1720,
+                "name": "Brackenspore"
+            },
+            {
+                "id": 1719,
+                "name": "Twin Ogron"
+            },
+            {
+                "id": 1723,
+                "name": "Ko'ragh"
+            },
+            {
+                "id": 1705,
+                "name": "Imperator Mar'gok"
+            }
+        ],
+        "brackets": [
+            {
+                "id": 1,
+                "name": "0-647"
+            },
+            {
+                "id": 2,
+                "name": "648-662"
+            },
+            {
+                "id": 3,
+                "name": "663-677"
+            },
+            {
+                "id": 4,
+                "name": "678-692"
+            },
+            {
+                "id": 5,
+                "name": "693+"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Blackrock Foundry",
+        "frozen": true,
+        "encounters": [
+            {
+                "id": 1691,
+                "name": "Gruul"
+            },
+            {
+                "id": 1696,
+                "name": "Oregorger"
+            },
+            {
+                "id": 1690,
+                "name": "Blast Furnace"
+            },
+            {
+                "id": 1693,
+                "name": "Hans'gar and Franzok"
+            },
+            {
+                "id": 1689,
+                "name": "Flamebender Ka'graz"
+            },
+            {
+                "id": 1713,
+                "name": "Kromog"
+            },
+            {
+                "id": 1694,
+                "name": "Beastlord Darmac"
+            },
+            {
+                "id": 1692,
+                "name": "Operator Thogar"
+            },
+            {
+                "id": 1695,
+                "name": "The Iron Maidens"
+            },
+            {
+                "id": 1704,
+                "name": "Blackhand"
+            }
+        ],
+        "brackets": [
+            {
+                "id": 1,
+                "name": "0-657"
+            },
+            {
+                "id": 2,
+                "name": "658-664"
+            },
+            {
+                "id": 3,
+                "name": "665-672"
+            },
+            {
+                "id": 4,
+                "name": "673-679"
+            },
+            {
+                "id": 5,
+                "name": "680-687"
+            },
+            {
+                "id": 6,
+                "name": "688-694"
+            },
+            {
+                "id": 7,
+                "name": "695+"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Hellfire Citadel",
+        "frozen": true,
+        "encounters": [
+            {
+                "id": 1778,
+                "name": "Hellfire Assault"
+            },
+            {
+                "id": 1785,
+                "name": "Iron Reaver"
+            },
+            {
+                "id": 1787,
+                "name": "Kormrok"
+            },
+            {
+                "id": 1798,
+                "name": "Hellfire High Council"
+            },
+            {
+                "id": 1786,
+                "name": "Kilrogg Deadeye"
+            },
+            {
+                "id": 1783,
+                "name": "Gorefiend"
+            },
+            {
+                "id": 1788,
+                "name": "Shadow-Lord Iskar"
+            },
+            {
+                "id": 1777,
+                "name": "Fel Lord Zakuun"
+            },
+            {
+                "id": 1800,
+                "name": "Xhul'horac"
+            },
+            {
+                "id": 1794,
+                "name": "Socrethar the Eternal"
+            },
+            {
+                "id": 1784,
+                "name": "Tyrant Velhari"
+            },
+            {
+                "id": 1795,
+                "name": "Mannoroth"
+            },
+            {
+                "id": 1799,
+                "name": "Archimonde"
+            }
+        ],
+        "brackets": [
+            {
+                "id": 1,
+                "name": "0-684"
+            },
+            {
+                "id": 2,
+                "name": "685-687"
+            },
+            {
+                "id": 3,
+                "name": "688-690"
+            },
+            {
+                "id": 4,
+                "name": "691-693"
+            },
+            {
+                "id": 5,
+                "name": "694-696"
+            },
+            {
+                "id": 6,
+                "name": "697-699"
+            },
+            {
+                "id": 7,
+                "name": "700-702"
+            },
+            {
+                "id": 8,
+                "name": "703-705"
+            },
+            {
+                "id": 9,
+                "name": "706-708"
+            },
+            {
+                "id": 10,
+                "name": "709-711"
+            },
+            {
+                "id": 11,
+                "name": "712-714"
+            },
+            {
+                "id": 12,
+                "name": "715-717"
+            },
+            {
+                "id": 13,
+                "name": "718-720"
+            },
+            {
+                "id": 14,
+                "name": "721-723"
+            },
+            {
+                "id": 15,
+                "name": "724-726"
+            },
+            {
+                "id": 16,
+                "name": "727-729"
+            },
+            {
+                "id": 17,
+                "name": "730-732"
+            },
+            {
+                "id": 18,
+                "name": "733-735"
+            },
+            {
+                "id": 19,
+                "name": "736-738"
+            },
+            {
+                "id": 20,
+                "name": "739-741"
+            },
+            {
+                "id": 21,
+                "name": "742-744"
+            },
+            {
+                "id": 22,
+                "name": "745+"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Mythic Keystone Dungeons",
+        "frozen": false,
+        "encounters": [
+            {
+                "id": 11516,
+                "name": "The Arcway"
+            },
+            {
+                "id": 11501,
+                "name": "Black Rook Hold"
+            },
+            {
+                "id": 11571,
+                "name": "Court of Stars"
+            },
+            {
+                "id": 11466,
+                "name": "Darkheart Thicket"
+            },
+            {
+                "id": 11456,
+                "name": "Eye of Azshara"
+            },
+            {
+                "id": 11477,
+                "name": "Halls of Valor"
+            },
+            {
+                "id": 11492,
+                "name": "Maw of Souls"
+            },
+            {
+                "id": 11458,
+                "name": "Neltharion's Lair"
+            },
+            {
+                "id": 11493,
+                "name": "Vault of the Wardens"
+            }
+        ],
+        "brackets": [
+            {
+                "id": 1,
+                "name": "Zero"
+            },
+            {
+                "id": 2,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/ability_warrior_battleshout.jpg'>"
+            },
+            {
+                "id": 3,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_magic_lesserinvisibilty.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_warrior_battleshout.jpg'>"
+            },
+            {
+                "id": 4,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_magic_lesserinvisibilty.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_warrior_battleshout.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_toughness.jpg'>"
+            },
+            {
+                "id": 5,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_nature_massteleport.jpg'>"
+            },
+            {
+                "id": 6,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_magic_lesserinvisibilty.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/spell_nature_massteleport.jpg'>"
+            },
+            {
+                "id": 7,
+                "name": ""
+            },
+            {
+                "id": 8,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_magic_lesserinvisibilty.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/spell_nature_massteleport.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_toughness.jpg'>"
+            },
+            {
+                "id": 9,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/inv_misc_volatilewater.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/spell_shadow_bloodboil.jpg'>"
+            },
+            {
+                "id": 10,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_shadow_bloodboil.jpg'>"
+            },
+            {
+                "id": 11,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/inv_misc_volatilewater.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/spell_shadow_bloodboil.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/achievement_boss_archaedas.jpg'>"
+            },
+            {
+                "id": 12,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/ability_warrior_focusedrage.jpg'>"
+            },
+            {
+                "id": 13,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_deathknight_necroticplague.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_warrior_focusedrage.jpg'>"
+            },
+            {
+                "id": 14,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/spell_deathknight_necroticplague.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_warrior_focusedrage.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_toughness.jpg'>"
+            },
+            {
+                "id": 15,
+                "name": ""
+            },
+            {
+                "id": 16,
+                "name": ""
+            },
+            {
+                "id": 17,
+                "name": "<img class='tiny-icon' src='\/img\/icons\/abilities\/inv_misc_volatilewater.jpg'><img class='tiny-icon' src='\/img\/icons\/abilities\/ability_warrior_battleshout.jpg'>"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Emerald Nightmare",
+        "frozen": false,
+        "encounters": [
+            {
+                "id": 1853,
+                "name": "Nythendra"
+            },
+            {
+                "id": 1873,
+                "name": "Il'gynoth, Heart of Corruption"
+            },
+            {
+                "id": 1876,
+                "name": "Elerethe Renferal"
+            },
+            {
+                "id": 1841,
+                "name": "Ursoc"
+            },
+            {
+                "id": 1854,
+                "name": "Dragons of Nightmare"
+            },
+            {
+                "id": 1877,
+                "name": "Cenarius"
+            },
+            {
+                "id": 1864,
+                "name": "Xavius"
+            }
+        ],
+        "brackets": [
+            {
+                "id": 1,
+                "name": "0-829"
+            },
+            {
+                "id": 2,
+                "name": "830-832"
+            },
+            {
+                "id": 3,
+                "name": "833-835"
+            },
+            {
+                "id": 4,
+                "name": "836-838"
+            },
+            {
+                "id": 5,
+                "name": "839-841"
+            },
+            {
+                "id": 6,
+                "name": "842-844"
+            },
+            {
+                "id": 7,
+                "name": "845-847"
+            },
+            {
+                "id": 8,
+                "name": "848-850"
+            },
+            {
+                "id": 9,
+                "name": "851-853"
+            },
+            {
+                "id": 10,
+                "name": "854-856"
+            },
+            {
+                "id": 11,
+                "name": "857-859"
+            },
+            {
+                "id": 12,
+                "name": "860-862"
+            },
+            {
+                "id": 13,
+                "name": "863-865"
+            },
+            {
+                "id": 14,
+                "name": "866-868"
+            },
+            {
+                "id": 15,
+                "name": "869-871"
+            },
+            {
+                "id": 16,
+                "name": "872-874"
+            },
+            {
+                "id": 17,
+                "name": "875-877"
+            },
+            {
+                "id": 18,
+                "name": "878-880"
+            },
+            {
+                "id": 19,
+                "name": "881-883"
+            },
+            {
+                "id": 20,
+                "name": "884-886"
+            },
+            {
+                "id": 21,
+                "name": "887-889"
+            },
+            {
+                "id": 22,
+                "name": "890-892"
+            },
+            {
+                "id": 23,
+                "name": "893-895"
+            },
+            {
+                "id": 24,
+                "name": "896-898"
+            },
+            {
+                "id": 25,
+                "name": "899-901"
+            },
+            {
+                "id": 26,
+                "name": "902-904"
+            },
+            {
+                "id": 27,
+                "name": "905-907"
+            },
+            {
+                "id": 28,
+                "name": "908-910"
+            },
+            {
+                "id": 29,
+                "name": "911-913"
+            },
+            {
+                "id": 30,
+                "name": "914-916"
+            },
+            {
+                "id": 31,
+                "name": "917-919"
+            },
+            {
+                "id": 32,
+                "name": "920+"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "The Nighthold",
+        "frozen": true,
+        "encounters": [
+            {
+                "id": 1849,
+                "name": "Skorpyron"
+            },
+            {
+                "id": 1865,
+                "name": "Chronomatic Anomaly"
+            },
+            {
+                "id": 1867,
+                "name": "Trilliax"
+            },
+            {
+                "id": 1871,
+                "name": "Spellblade Aluriel"
+            },
+            {
+                "id": 1862,
+                "name": "Tichondrius"
+            },
+            {
+                "id": 1863,
+                "name": "Star Augur Etraeus"
+            },
+            {
+                "id": 1842,
+                "name": "Krosus"
+            },
+            {
+                "id": 1886,
+                "name": "High Botanist Tel'arn"
+            },
+            {
+                "id": 1872,
+                "name": "Grand Magistrix Elisande"
+            },
+            {
+                "id": 1866,
+                "name": "Gul'dan"
+            }
+        ]
+    }
+]
